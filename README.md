@@ -1,372 +1,223 @@
 <p align="center">
-    <h1 align="center">HAYYAT_DSU</h1>
+    <h1 align="center">HAYYat_DSU</h1>
 </p>
 <p align="center">
-    <em><code>❯ REPLACE-ME</code></em>
+    <em>A Flask web application that scrapes online sources (News, Twitter, YouTube) for multi-source sentiment analysis on user-defined topics.</em>
 </p>
 <p align="center">
-	<img src="https://img.shields.io/github/license/hemanth8705/HAYYat_DSU?style=flat&logo=opensourceinitiative&logoColor=white&color=0080ff" alt="license">
-	<img src="https://img.shields.io/github/last-commit/hemanth8705/HAYYat_DSU?style=flat&logo=git&logoColor=white&color=0080ff" alt="last-commit">
-	<img src="https://img.shields.io/github/languages/top/hemanth8705/HAYYat_DSU?style=flat&color=0080ff" alt="repo-top-language">
-	<img src="https://img.shields.io/github/languages/count/hemanth8705/HAYYat_DSU?style=flat&color=0080ff" alt="repo-language-count">
+	<img src="https://img.shields.io/github/license/althaf803/HAYYat_DSU?style=flat&logo=opensourceinitiative&logoColor=white&color=0080ff" alt="license">
+	<img src="https://img.shields.io/github/last-commit/althaf803/HAYYat_DSU?style=flat&logo=git&logoColor=white&color=0080ff" alt="last-commit">
+	<img src="https://img.shields.io/github/languages/top/althaf803/HAYYat_DSU?style=flat&color=0080ff" alt="repo-top-language">
+	<img src="https://img.shields.io/github/languages/count/althaf803/HAYYat_DSU?style=flat&color=0080ff" alt="repo-language-count">
 </p>
 <p align="center">
 		<em>Built with the tools and technologies:</em>
 </p>
 <p align="center">
-	<img src="https://img.shields.io/badge/tqdm-FFC107.svg?style=flat&logo=tqdm&logoColor=black" alt="tqdm">
-	<img src="https://img.shields.io/badge/JavaScript-F7DF1E.svg?style=flat&logo=JavaScript&logoColor=black" alt="JavaScript">
+	<img src="https://img.shields.io/badge/Python-3776AB.svg?style=flat&logo=Python&logoColor=white" alt="Python">
+	<img src="https://img.shields.io/badge/Flask-000000.svg?style=flat&logo=Flask&logoColor=white" alt="Flask">
+	<img src="https://img.shields.io/badge/Selenium-43B02A.svg?style=flat&logo=Selenium&logoColor=white" alt="Selenium">
+	<img src="https://img.shields.io/badge/Beautiful%20Soup-A06544.svg?style=flat&logo=Beautiful-Soup&logoColor=white" alt="Beautiful Soup">
+	<img src="https://img.shields.io/badge/pandas-150458.svg?style=flat&logo=pandas&logoColor=white" alt="pandas">
+	<br>
+	<img src="https://img.shields.io/badge/Hugging%20Face-FFD21E.svg?style=flat&logo=Hugging-Face&logoColor=black" alt="Hugging Face">
+	<img src="https://img.shields.io/badge/spaCy-09A3D5.svg?style=flat&logo=spaCy&logoColor=white" alt="spaCy">
+	<img src="https://img.shields.io/badge/NLTK-3776AB.svg?style=flat&logo=NLTK&logoColor=white" alt="NLTK">
 	<img src="https://img.shields.io/badge/Jupyter-F37626.svg?style=flat&logo=Jupyter&logoColor=white" alt="Jupyter">
 	<img src="https://img.shields.io/badge/HTML5-E34F26.svg?style=flat&logo=HTML5&logoColor=white" alt="HTML5">
-	<img src="https://img.shields.io/badge/Selenium-43B02A.svg?style=flat&logo=Selenium&logoColor=white" alt="Selenium">
-	<br>
-	<img src="https://img.shields.io/badge/Python-3776AB.svg?style=flat&logo=Python&logoColor=white" alt="Python">
-	<img src="https://img.shields.io/badge/pandas-150458.svg?style=flat&logo=pandas&logoColor=white" alt="pandas">
-	<img src="https://img.shields.io/badge/Flask-000000.svg?style=flat&logo=Flask&logoColor=white" alt="Flask">
-	<img src="https://img.shields.io/badge/JSON-000000.svg?style=flat&logo=JSON&logoColor=white" alt="JSON">
+	<img src="https://img.shields.io/badge/JavaScript-F7DF1E.svg?style=flat&logo=JavaScript&logoColor=black" alt="JavaScript">
 </p>
 
 <br>
 
 #####  Table of Contents
 
-- [ Overview](#-overview)
-- [ Features](#-features)
-- [ Repository Structure](#-repository-structure)
-- [ Modules](#-modules)
-- [ Getting Started](#-getting-started)
-    - [ Prerequisites](#-prerequisites)
-    - [ Installation](#-installation)
-    - [ Usage](#-usage)
-    - [ Tests](#-tests)
-- [ Project Roadmap](#-project-roadmap)
-- [ Contributing](#-contributing)
-- [ License](#-license)
-- [ Acknowledgments](#-acknowledgments)
-
+- [Overview](#-overview)
+- [Features](#-features)
+- [Repository Structure](#-repository-structure)
+- [Modules](#-modules)
+- [Getting Started](#-getting-started)
+    - [Prerequisites](#-prerequisites)
+    - [Installation](#-installation)
+    - [Usage](#-usage)
+- [Project Roadmap](#-project-roadmap)
+- [Contributing](#-contributing)
+- [License](#-license)
+- [Acknowledgments](#-acknowledgments)
 
 ---
 
-##  Repository Structure
+##  Overview
+
+HAYYat_DSU is a comprehensive sentiment analysis tool built with Python and Flask. It allows users to input search queries to scrape real-time data from news articles, Twitter (X), and YouTube comments. The collected data is then processed through a sentiment analysis pipeline using models from Hugging Face Transformers and other NLP libraries. The final results, including sentiment scores and source links, are displayed on a clean and interactive web interface.
+
+---
+
+## Features
+
+- **Multi-Source Scraping**: Gathers data from Google News, Twitter (via search and user profiles), and YouTube comments.
+- **Advanced Sentiment Analysis**: Utilizes a sophisticated pipeline including `transformers`, `spaCy`, and `NLTK` for accurate sentiment scoring.
+- **Web-Based Interface**: A simple and intuitive UI built with Flask, HTML, and CSS for easy interaction.
+- **Modular Architecture**: The project is broken down into distinct modules for data collection, sentiment analysis, and web presentation, making it easy to maintain and extend.
+- **Dynamic Results Display**: Presents the analyzed data in a clear card-based layout on the results page.
+
+---
+
+## Repository Structure
+
+The project is organized to separate concerns, with a main `src` directory containing the application's core logic.
 
 ```sh
 └── HAYYat_DSU/
+    ├── .gitignore
+    ├── README.md
     ├── requirements.txt
-    └── src
-        ├── analyze_sentiment
-        │   ├── __pycache__
-        │   ├── preprocessing.py
-        │   ├── sentiment_analyzer.py
-        │   ├── sentiment_for_scraped_articles
-        │   ├── sentiment_for_twitter_id
-        │   ├── sentiment_for_twitter_search
-        │   └── sentiment_for_yt_videos
+    └── src/
         ├── app.py
         ├── articles.py
-        ├── data
-        │   ├── comments_on_id.json
-        │   ├── news_articles.json
-        │   ├── tweets_on_search.json
-        │   └── yt_data.json
-        ├── data_collection
-        │   ├── chromedriver.exe
-        │   ├── news_scraper
-        │   ├── scrape_yt_comments
-        │   ├── twitter_news
-        │   └── video to text
-        ├── scraped_data
-        │   ├── news_articles.csv
-        │   ├── tweets_on_id.json
-        │   ├── tweets_on_search.json
-        │   └── yt_data.json
-        ├── static
-        │   ├── 5905282-hd_1920_1080_24fps.mp4
-        │   ├── resultss.css
-        │   └── styles.css
-        ├── templates
-        │   ├── index.html
-        │   ├── results.html
-        │   ├── results_1.html
-        │   └── tweets.html
         ├── twitter_id.py
         ├── twitter_search.py
         └── youtube.py
-```
+        ├── analyze_sentiment/
+        │   ├── preprocessing.py
+        │   └── sentiment_analyzer.py
+        ├── data_collection/
+        │   ├── news_scraper/
+        │   ├── scrape_yt_comments/
+        │   └── twitter_news/
+        ├── static/
+        │   ├── resultss.css
+        │   └── styles.css
+        └── templates/
+            ├── index.html
+            └── results.html
+Modules
+<details closed><summary>Root</summary>
 
----
+File	Summary
+requirements.txt	Lists all the Python packages required to run the project.
 
-##  Modules
-
-<details closed><summary>.</summary>
-
-| File | Summary |
-| --- | --- |
-| [requirements.txt](https://github.com/hemanth8705/HAYYat_DSU/blob/main/requirements.txt) | <code>❯ REPLACE-ME</code> |
-
+Export to Sheets
 </details>
 
 <details closed><summary>src</summary>
 
-| File | Summary |
-| --- | --- |
-| [articles.py](https://github.com/hemanth8705/HAYYat_DSU/blob/main/src/articles.py) | <code>❯ REPLACE-ME</code> |
-| [twitter_search.py](https://github.com/hemanth8705/HAYYat_DSU/blob/main/src/twitter_search.py) | <code>❯ REPLACE-ME</code> |
-| [twitter_id.py](https://github.com/hemanth8705/HAYYat_DSU/blob/main/src/twitter_id.py) | <code>❯ REPLACE-ME</code> |
-| [youtube.py](https://github.com/hemanth8705/HAYYat_DSU/blob/main/src/youtube.py) | <code>❯ REPLACE-ME</code> |
-| [app.py](https://github.com/hemanth8705/HAYYat_DSU/blob/main/src/app.py) | <code>❯ REPLACE-ME</code> |
+File	Summary
+app.py	The main Flask web server that handles user requests and orchestrates the scraping and analysis tasks.
+articles.py	Runner script called by app.py to scrape news articles and perform sentiment analysis.
+twitter_search.py	Runner script for scraping tweets based on a search query.
+twitter_id.py	Runner script for scraping comments from the latest tweets of a specific Twitter profile.
+youtube.py	Runner script for scraping YouTube video comments and performing sentiment analysis.
 
+Export to Sheets
 </details>
 
 <details closed><summary>src.templates</summary>
 
-| File | Summary |
-| --- | --- |
-| [tweets.html](https://github.com/hemanth8705/HAYYat_DSU/blob/main/src/templates/tweets.html) | <code>❯ REPLACE-ME</code> |
-| [index.html](https://github.com/hemanth8705/HAYYat_DSU/blob/main/src/templates/index.html) | <code>❯ REPLACE-ME</code> |
-| [results_1.html](https://github.com/hemanth8705/HAYYat_DSU/blob/main/src/templates/results_1.html) | <code>❯ REPLACE-ME</code> |
-| [results.html](https://github.com/hemanth8705/HAYYat_DSU/blob/main/src/templates/results.html) | <code>❯ REPLACE-ME</code> |
+File	Summary
+index.html	The main landing page of the web application containing the search form.
+results.html	The page that dynamically loads and displays the sentiment analysis results.
 
-</details>
-
-<details closed><summary>src.data_collection.video to text</summary>
-
-| File | Summary |
-| --- | --- |
-| [DOWNLOAD ANY PLAYLIST FROM YOUTUBE USING PYTHON ｜｜ NARESH SWAMI [qOxy9QIDxvY].webm](https://github.com/hemanth8705/HAYYat_DSU/blob/main/src/data_collection/video to text/DOWNLOAD ANY PLAYLIST FROM YOUTUBE USING PYTHON ｜｜ NARESH SWAMI [qOxy9QIDxvY].webm) | <code>❯ REPLACE-ME</code> |
-| [yt_video_download.py](https://github.com/hemanth8705/HAYYat_DSU/blob/main/src/data_collection/video to text/yt_video_download.py) | <code>❯ REPLACE-ME</code> |
-| [Python Beginner Project ｜ Youtube Downloader.webm](https://github.com/hemanth8705/HAYYat_DSU/blob/main/src/data_collection/video to text/Python Beginner Project ｜ Youtube Downloader.webm) | <code>❯ REPLACE-ME</code> |
-
-</details>
-
-<details closed><summary>src.data_collection.twitter_news</summary>
-
-| File | Summary |
-| --- | --- |
-| [tweets.json](https://github.com/hemanth8705/HAYYat_DSU/blob/main/src/data_collection/twitter_news/tweets.json) | <code>❯ REPLACE-ME</code> |
-| [tweets_on_specific_id.py](https://github.com/hemanth8705/HAYYat_DSU/blob/main/src/data_collection/twitter_news/tweets_on_specific_id.py) | <code>❯ REPLACE-ME</code> |
-| [twitter_details.py](https://github.com/hemanth8705/HAYYat_DSU/blob/main/src/data_collection/twitter_news/twitter_details.py) | <code>❯ REPLACE-ME</code> |
-| [tweets_on_search.py](https://github.com/hemanth8705/HAYYat_DSU/blob/main/src/data_collection/twitter_news/tweets_on_search.py) | <code>❯ REPLACE-ME</code> |
-
-</details>
-
-<details closed><summary>src.data_collection.scrape_yt_comments</summary>
-
-| File | Summary |
-| --- | --- |
-| [save_yt_comments.py](https://github.com/hemanth8705/HAYYat_DSU/blob/main/src/data_collection/scrape_yt_comments/save_yt_comments.py) | <code>❯ REPLACE-ME</code> |
-| [get_yt_comments.py](https://github.com/hemanth8705/HAYYat_DSU/blob/main/src/data_collection/scrape_yt_comments/get_yt_comments.py) | <code>❯ REPLACE-ME</code> |
-| [get_links.py](https://github.com/hemanth8705/HAYYat_DSU/blob/main/src/data_collection/scrape_yt_comments/get_links.py) | <code>❯ REPLACE-ME</code> |
-
-</details>
-
-<details closed><summary>src.data_collection.news_scraper</summary>
-
-| File | Summary |
-| --- | --- |
-| [rough.ipynb](https://github.com/hemanth8705/HAYYat_DSU/blob/main/src/data_collection/news_scraper/rough.ipynb) | <code>❯ REPLACE-ME</code> |
-| [save_news_articles.py](https://github.com/hemanth8705/HAYYat_DSU/blob/main/src/data_collection/news_scraper/save_news_articles.py) | <code>❯ REPLACE-ME</code> |
-| [get_news_articles.py](https://github.com/hemanth8705/HAYYat_DSU/blob/main/src/data_collection/news_scraper/get_news_articles.py) | <code>❯ REPLACE-ME</code> |
-
-</details>
-
-<details closed><summary>src.data_collection.news_scraper.backend</summary>
-
-| File | Summary |
-| --- | --- |
-| [selenium_rough.py](https://github.com/hemanth8705/HAYYat_DSU/blob/main/src/data_collection/news_scraper/backend/selenium_rough.py) | <code>❯ REPLACE-ME</code> |
-| [scraper.py](https://github.com/hemanth8705/HAYYat_DSU/blob/main/src/data_collection/news_scraper/backend/scraper.py) | <code>❯ REPLACE-ME</code> |
-| [yt_news_links_scraper.py](https://github.com/hemanth8705/HAYYat_DSU/blob/main/src/data_collection/news_scraper/backend/yt_news_links_scraper.py) | <code>❯ REPLACE-ME</code> |
-| [app.py](https://github.com/hemanth8705/HAYYat_DSU/blob/main/src/data_collection/news_scraper/backend/app.py) | <code>❯ REPLACE-ME</code> |
-
-</details>
-
-<details closed><summary>src.data_collection.news_scraper.chromedriver-win64</summary>
-
-| File | Summary |
-| --- | --- |
-| [LICENSE.chromedriver](https://github.com/hemanth8705/HAYYat_DSU/blob/main/src/data_collection/news_scraper/chromedriver-win64/LICENSE.chromedriver) | <code>❯ REPLACE-ME</code> |
-| [THIRD_PARTY_NOTICES.chromedriver](https://github.com/hemanth8705/HAYYat_DSU/blob/main/src/data_collection/news_scraper/chromedriver-win64/THIRD_PARTY_NOTICES.chromedriver) | <code>❯ REPLACE-ME</code> |
-
-</details>
-
-<details closed><summary>src.data_collection.news_scraper.frontend</summary>
-
-| File | Summary |
-| --- | --- |
-| [index.html](https://github.com/hemanth8705/HAYYat_DSU/blob/main/src/data_collection/news_scraper/frontend/index.html) | <code>❯ REPLACE-ME</code> |
-| [style.css](https://github.com/hemanth8705/HAYYat_DSU/blob/main/src/data_collection/news_scraper/frontend/style.css) | <code>❯ REPLACE-ME</code> |
-| [script.js](https://github.com/hemanth8705/HAYYat_DSU/blob/main/src/data_collection/news_scraper/frontend/script.js) | <code>❯ REPLACE-ME</code> |
-
-</details>
-
-<details closed><summary>src.scraped_data</summary>
-
-| File | Summary |
-| --- | --- |
-| [yt_data.json](https://github.com/hemanth8705/HAYYat_DSU/blob/main/src/scraped_data/yt_data.json) | <code>❯ REPLACE-ME</code> |
-| [tweets_on_search.json](https://github.com/hemanth8705/HAYYat_DSU/blob/main/src/scraped_data/tweets_on_search.json) | <code>❯ REPLACE-ME</code> |
-| [tweets_on_id.json](https://github.com/hemanth8705/HAYYat_DSU/blob/main/src/scraped_data/tweets_on_id.json) | <code>❯ REPLACE-ME</code> |
-
+Export to Sheets
 </details>
 
 <details closed><summary>src.analyze_sentiment</summary>
 
-| File | Summary |
-| --- | --- |
-| [preprocessing.py](https://github.com/hemanth8705/HAYYat_DSU/blob/main/src/analyze_sentiment/preprocessing.py) | <code>❯ REPLACE-ME</code> |
-| [sentiment_analyzer.py](https://github.com/hemanth8705/HAYYat_DSU/blob/main/src/analyze_sentiment/sentiment_analyzer.py) | <code>❯ REPLACE-ME</code> |
+File	Summary
+sentiment_analyzer.py	Contains the core sentiment analysis function using a Hugging Face transformers model.
+preprocessing.py	A module for cleaning and preprocessing text data using NLTK and spaCy before analysis.
 
+Export to Sheets
 </details>
 
-<details closed><summary>src.analyze_sentiment.sentiment_for_yt_videos</summary>
+Getting Started
+Follow these instructions to get a copy of the project up and running on your local machine.
 
-| File | Summary |
-| --- | --- |
-| [preprocessing.py](https://github.com/hemanth8705/HAYYat_DSU/blob/main/src/analyze_sentiment/sentiment_for_yt_videos/preprocessing.py) | <code>❯ REPLACE-ME</code> |
-| [analyze_yt_and_save.py](https://github.com/hemanth8705/HAYYat_DSU/blob/main/src/analyze_sentiment/sentiment_for_yt_videos/analyze_yt_and_save.py) | <code>❯ REPLACE-ME</code> |
-| [rough.ipynb](https://github.com/hemanth8705/HAYYat_DSU/blob/main/src/analyze_sentiment/sentiment_for_yt_videos/rough.ipynb) | <code>❯ REPLACE-ME</code> |
-| [get_sentiment_for_yt.py](https://github.com/hemanth8705/HAYYat_DSU/blob/main/src/analyze_sentiment/sentiment_for_yt_videos/get_sentiment_for_yt.py) | <code>❯ REPLACE-ME</code> |
+Prerequisites
+Python: 3.8 or newer.
 
-</details>
+Google Chrome: The project uses Selenium to automate Chrome, so it must be installed.
 
-<details closed><summary>src.analyze_sentiment.sentiment_for_scraped_articles</summary>
+Git: Required for cloning the repository.
 
-| File | Summary |
-| --- | --- |
-| [preprocessing.py](https://github.com/hemanth8705/HAYYat_DSU/blob/main/src/analyze_sentiment/sentiment_for_scraped_articles/preprocessing.py) | <code>❯ REPLACE-ME</code> |
-| [rough.ipynb](https://github.com/hemanth8705/HAYYat_DSU/blob/main/src/analyze_sentiment/sentiment_for_scraped_articles/rough.ipynb) | <code>❯ REPLACE-ME</code> |
-| [get_sentiment_for_articles.py](https://github.com/hemanth8705/HAYYat_DSU/blob/main/src/analyze_sentiment/sentiment_for_scraped_articles/get_sentiment_for_articles.py) | <code>❯ REPLACE-ME</code> |
-| [analyze_csv_file_and_save.py](https://github.com/hemanth8705/HAYYat_DSU/blob/main/src/analyze_sentiment/sentiment_for_scraped_articles/analyze_csv_file_and_save.py) | <code>❯ REPLACE-ME</code> |
+Installation
+Clone the repository:
 
-</details>
+Bash
 
-<details closed><summary>src.analyze_sentiment.sentiment_for_twitter_search</summary>
+❯ git clone [https://github.com/althaf803/HAYYat_DSU.git](https://github.com/althaf803/HAYYat_DSU.git)
+Navigate to the project directory:
 
-| File | Summary |
-| --- | --- |
-| [preprocessing.py](https://github.com/hemanth8705/HAYYat_DSU/blob/main/src/analyze_sentiment/sentiment_for_twitter_search/preprocessing.py) | <code>❯ REPLACE-ME</code> |
-| [rough.ipynb](https://github.com/hemanth8705/HAYYat_DSU/blob/main/src/analyze_sentiment/sentiment_for_twitter_search/rough.ipynb) | <code>❯ REPLACE-ME</code> |
-| [get_sentiment_for_tweets.py](https://github.com/hemanth8705/HAYYat_DSU/blob/main/src/analyze_sentiment/sentiment_for_twitter_search/get_sentiment_for_tweets.py) | <code>❯ REPLACE-ME</code> |
-| [analyze_tweets_and_save.py](https://github.com/hemanth8705/HAYYat_DSU/blob/main/src/analyze_sentiment/sentiment_for_twitter_search/analyze_tweets_and_save.py) | <code>❯ REPLACE-ME</code> |
+Bash
 
-</details>
-
-<details closed><summary>src.analyze_sentiment.sentiment_for_twitter_id</summary>
-
-| File | Summary |
-| --- | --- |
-| [analyze_twitter_comments_and_save.py](https://github.com/hemanth8705/HAYYat_DSU/blob/main/src/analyze_sentiment/sentiment_for_twitter_id/analyze_twitter_comments_and_save.py) | <code>❯ REPLACE-ME</code> |
-| [preprocessing.py](https://github.com/hemanth8705/HAYYat_DSU/blob/main/src/analyze_sentiment/sentiment_for_twitter_id/preprocessing.py) | <code>❯ REPLACE-ME</code> |
-| [get_sentiment_for_twitter_comments.py](https://github.com/hemanth8705/HAYYat_DSU/blob/main/src/analyze_sentiment/sentiment_for_twitter_id/get_sentiment_for_twitter_comments.py) | <code>❯ REPLACE-ME</code> |
-
-</details>
-
----
-
-##  Getting Started
-
-###  Prerequisites
-
-**Python**: `version x.y.z`
-
-###  Installation
-
-Build the project from source:
-
-1. Clone the HAYYat_DSU repository:
-```sh
-❯ git clone https://github.com/hemanth8705/HAYYat_DSU
-```
-
-2. Navigate to the project directory:
-```sh
 ❯ cd HAYYat_DSU
-```
+Create and activate a Python virtual environment:
 
-3. Install the required dependencies:
-```sh
-❯ pip install -r requirements.txt
-```
+Bash
 
-###  Usage
+# Create the environment
+❯ python -m venv venv
 
-To run the project, execute the following command:
+# Activate on Windows
+❯ .\venv\Scripts\activate
+Install the required dependencies from the updated requirements.txt:
 
-```sh
-❯ python main.py
-```
+Bash
 
-###  Tests
+❯ python -m pip install -r requirements.txt
+Download necessary NLP models for spaCy and NLTK:
 
-Execute the test suite using the following command:
+Bash
 
-```sh
-❯ pytest
-```
+❯ python -m spacy download en_core_web_sm
+❯ python -c "import nltk; nltk.download('stopwords')"
+Configuration:
 
----
+Twitter Credentials: Add your Twitter (X) username and password in src/data_collection/twitter_news/twitter_details.py.
 
-##  Project Roadmap
+YouTube API Key: Add your own YouTube Data API v3 key in src/data_collection/scrape_yt_comments/get_yt_comments.py.
 
-- [X] **`Task 1`**: <strike>Implement feature one.</strike>
-- [ ] **`Task 2`**: Implement feature two.
-- [ ] **`Task 3`**: Implement feature three.
+WebDriver: Ensure your chromedriver.exe (as specified in the scraper scripts) matches your installed Google Chrome version.
 
----
+Usage
+To run the project, execute the following commands from the project's root directory:
 
-##  Contributing
+Navigate to the src folder:
 
+Bash
+
+❯ cd src
+Run the Flask application:
+
+Bash
+
+❯ python app.py
+Open your web browser and go to http://127.0.0.1:5000.
+
+Project Roadmap
+[X] <strike>Core scraping and analysis engine for News, Twitter, and YouTube.</strike>
+
+[X] <strike>Flask web interface for user input and results display.</strike>
+
+[ ] Improve scraper resilience to handle website blocks and CAPTCHAs.
+
+[ ] Implement a database (e.g., SQLite, PostgreSQL) to store historical search results.
+
+[ ] Enhance frontend with better data visualizations (e.g., charts, graphs).
+
+[ ] Refactor code to use a centralized configuration for API keys and paths.
+
+Contributing
 Contributions are welcome! Here are several ways you can contribute:
 
-- **[Report Issues](https://github.com/hemanth8705/HAYYat_DSU/issues)**: Submit bugs found or log feature requests for the `HAYYat_DSU` project.
-- **[Submit Pull Requests](https://github.com/hemanth8705/HAYYat_DSU/blob/main/CONTRIBUTING.md)**: Review open PRs, and submit your own PRs.
-- **[Join the Discussions](https://github.com/hemanth8705/HAYYat_DSU/discussions)**: Share your insights, provide feedback, or ask questions.
+Report Issues: Submit bugs found or log feature requests.
 
-<details closed>
-<summary>Contributing Guidelines</summary>
+Submit Pull Requests: Review open PRs, and submit your own.
 
-1. **Fork the Repository**: Start by forking the project repository to your github account.
-2. **Clone Locally**: Clone the forked repository to your local machine using a git client.
-   ```sh
-   git clone https://github.com/hemanth8705/HAYYat_DSU
-   ```
-3. **Create a New Branch**: Always work on a new branch, giving it a descriptive name.
-   ```sh
-   git checkout -b new-feature-x
-   ```
-4. **Make Your Changes**: Develop and test your changes locally.
-5. **Commit Your Changes**: Commit with a clear message describing your updates.
-   ```sh
-   git commit -m 'Implemented new feature x.'
-   ```
-6. **Push to github**: Push the changes to your forked repository.
-   ```sh
-   git push origin new-feature-x
-   ```
-7. **Submit a Pull Request**: Create a PR against the original project repository. Clearly describe the changes and their motivations.
-8. **Review**: Once your PR is reviewed and approved, it will be merged into the main branch. Congratulations on your contribution!
-</details>
+Join the Discussions: Share your insights, provide feedback, or ask questions.
 
-<details closed>
-<summary>Contributor Graph</summary>
-<br>
-<p align="left">
-   <a href="https://github.com{/hemanth8705/HAYYat_DSU/}graphs/contributors">
-      <img src="https://contrib.rocks/image?repo=hemanth8705/HAYYat_DSU">
-   </a>
-</p>
-</details>
+License
+This project is licensed under the MIT License. See the LICENSE file for more details. (You should create a LICENSE file in your repository with the MIT License text).
 
----
-
-##  License
-
-This project is protected under the [SELECT-A-LICENSE](https://choosealicense.com/licenses) License. For more details, refer to the [LICENSE](https://choosealicense.com/licenses/) file.
-
----
-
-##  Acknowledgments
-
-- List any resources, contributors, inspiration, etc. here.
-
----
+Acknowledgments
+Acknowledge any resources, inspirations, or contributors here.
