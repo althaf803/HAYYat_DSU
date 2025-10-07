@@ -51,40 +51,6 @@ The project is built with the following major frameworks, libraries, and tools:
 
 ---
 
-## 🗂 Repository Structure
-```bash
-└── HAYYat_DSU/
-    ├── .gitignore
-    ├── README.md
-    ├── requirements.txt
-    └── src/
-        ├── app.py
-        ├── articles.py
-        ├── twitter_id.py
-        ├── twitter_search.py
-        ├── youtube.py
-        │
-        ├── analyze_sentiment/
-        │   ├── preprocessing.py
-        │   └── sentiment_analyzer.py
-        │
-        ├── data_collection/
-        │   ├── news_scraper/
-        │   ├── scrape_yt_comments/
-        │   └── twitter_news/
-        │
-        ├── static/
-        │   ├── resultss.css
-        │   └── styles.css
-        │
-        └── templates/
-            ├── index.html
-            └── results.html
-
----
-
----
-
 ## 🚀 Getting Started
 
 Follow these instructions to get a copy of the project up and running on your local machine.
