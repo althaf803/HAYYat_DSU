@@ -1,0 +1,16 @@
+flask
+selenium
+beautifulsoup4
+pandas
+google-api-python-client
+textblob
+transformers
+torch
+nltk
+spacy
+webdriver-manager
+requests
+pytube
+youtube-transcript-api
+tqdm
+tenacity
